@@ -31,7 +31,9 @@ export default function Login() {
         password
       });
 
-      localStorage.setItem("user",JSON.stringify(res.data));
+      
+      const user = res.data.user;
+      localStorage.setItem("user",JSON.stringify(user));
 
       navigate("/dashboard");
 

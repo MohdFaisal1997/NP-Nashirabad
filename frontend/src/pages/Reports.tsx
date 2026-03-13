@@ -691,7 +691,7 @@ interface ReportFilters {
 const ReportPage = () => {
 
 const [banks,setBanks] = useState<any[]>([]);
-const [contractors,setContractors] = useState<any[]>([]);
+const [,setContractors] = useState<any[]>([]);
 const [data,setData] = useState<any[]>([]);
 const [filters,setFilters] = useState<ReportFilters>({});
 
@@ -717,9 +717,9 @@ const res = await axios.get(
 {
 params:{
 bank_id: filters.bank_id || "all",
-contractor_id: filters.contractor_id || "all",
-from: filters.from,
-to: filters.to
+// contractor_id: filters.contractor_id || "all",
+from: filters.from || "",
+to: filters.to || ""
 }
 }
 );
@@ -784,10 +784,10 @@ title:"(2) बँक",
 dataIndex:"bank_name"
 },
 
-{
-title:"(3) कंत्राटदार",
-dataIndex:"contractor_name"
-},
+// {
+// title:"(3) कंत्राटदार",
+// dataIndex:"contractor_name"
+// },
 
 {
 title:"(4) तपशील",
@@ -837,7 +837,7 @@ onChange={(v)=>setFilters({...filters,bank_id:v})}
 
 </Col>
 
-<Col span={6}>
+{/* <Col span={6}>
 
 <Select
 placeholder="Select Contractor"
@@ -855,7 +855,7 @@ onChange={(v)=>setFilters({...filters,contractor_id:v})}
 
 </Select>
 
-</Col>
+</Col> */}
 
 <Col span={6}>
 

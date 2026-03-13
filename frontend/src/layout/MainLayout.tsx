@@ -83,13 +83,17 @@ export default function MainLayout({ children }: any) {
         justifyContent:"space-between"
       }}>
 
-        <div style={{
-          color:"white",
-          fontWeight:"bold",
-          marginRight:"30px"
-        }}>
-          Nagar Parishad Nashirabad
-        </div>
+         <div
+    style={{
+      color: "white",
+      fontWeight: "bold",
+      marginRight: "30px",
+      cursor: "pointer"
+    }}
+    onClick={() => navigate("/dashboard")}
+  >
+    Nagar Parishad Nashirabad
+  </div>
 
         <Menu
           theme="dark"
