@@ -701,19 +701,19 @@ loadContractors();
 },[]);
 
 const loadBanks = async()=>{
-const res = await axios.get("http://localhost:5000/api/banks");
+const res = await axios.get("https://np-nashirabad-6.onrender.com/api/banks");
 setBanks(res.data);
 };
 
 const loadContractors = async()=>{
-const res = await axios.get("http://localhost:5000/api/contractors");
+const res = await axios.get("https://np-nashirabad-6.onrender.com/api/contractors");
 setContractors(res.data);
 };
 
 const getReport = async () => {
 
 const res = await axios.get(
-"http://localhost:5000/api/report",
+"https://np-nashirabad-6.onrender.com/api/report",
 {
 params:{
 bank_id: filters.bank_id || "all",
