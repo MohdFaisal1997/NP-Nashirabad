@@ -30,6 +30,6 @@ app.use("/api/payment-reports", paymentReportsRoutes);
 app.use("/api/report", reportRoutes);
 
 
-app.listen(3000,()=>{
-  console.log("Server running on port 3000");
+app.listen(25733,()=>{
+  console.log("Server running on port 25733");
 });
