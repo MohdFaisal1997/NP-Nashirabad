@@ -12,7 +12,7 @@ const paymentsRoutes = require("./routes/payments");
 const paymentReportsRoutes = require("./routes/paymentReports");
 const reportRoutes = require("./routes/report");
 
-
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(cors());
@@ -30,6 +30,9 @@ app.use("/api/payment-reports", paymentReportsRoutes);
 app.use("/api/report", reportRoutes);
 
 
-app.listen(25733,()=>{
-  console.log("Server running on port 25733");
+// app.listen(25733,()=>{
+//   console.log("Server running on port 25733");
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
